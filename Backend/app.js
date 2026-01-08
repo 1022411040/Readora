@@ -23,6 +23,15 @@ app.use(
 app.use(express.json());
 app.use(morgan("combined"));
 
+/* ✅ HOME / HEALTH CHECK */
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Readora backend is running",
+    environment: process.env.NODE_ENV || "development",
+    timestamp: new Date().toISOString()
+  });
+});
 app.use("/api/users", userRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/ebooks", ebookRoutes);
