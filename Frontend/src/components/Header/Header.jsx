@@ -895,7 +895,7 @@ const HeaderSearch = () => {
             onBlur={() => setTimeout(() => setIsFocused(false), 100)}
             onKeyDown={handleKeyDown}
             placeholder="Search books, authors, or topics..."
-            className="w-full pl-12 pr-10 py-2.5 bg-transparent border-0 outline-none text-slate-700 placeholder-slate-500 text-sm md:text-base rounded-full"
+            className="w-full pl-12 pr-10 py-2.5 bg-transparent outline-none text-slate-700 placeholder-slate-500 text-sm md:text-base rounded-full border border-slate-200"
             aria-label="Search"
           />
           <button
@@ -1454,7 +1454,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       <Link
                         to="/login"
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-3 px-3 py-3 rounded-lg mx-2 text-slate-700 hover:bg-slate-100 transition-colors"
+                        className="flex items-center justify-center gap-3 px-3 py-3 rounded-lg mx-2 text-slate-700 hover:bg-slate-100 transition-colors"
                       >
                         <FiUser className="text-slate-500 text-lg" />
                         <span className="font-medium">Login</span>
@@ -1462,7 +1462,7 @@ const MobileMenu = ({ open, setOpen }) => {
                       <Link
                         to="/register"
                         onClick={() => setOpen(false)}
-                        className="flex items-center gap-3 px-3 py-3 rounded-lg mx-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:opacity-90 transition-opacity"
+                        className="flex items-center justify-center gap-3 px-3 py-3 rounded-lg mx-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:opacity-90 transition-opacity"
                       >
                         <FiUser className="text-white text-lg" />
                         <span className="font-medium">Sign Up</span>

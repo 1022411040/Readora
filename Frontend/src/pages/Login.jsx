@@ -8,6 +8,7 @@ import Axios from "../utils/network/axios";
 import SummaryApi from "../comman/summaryApi";
 import fetchUserDetails from "../utils/auth/fetchUserDetails";
 import { setUserDetails } from "../Store/userSlice";
+import { showToast } from "../utils/showToast";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,7 +38,12 @@ const Login = () => {
       });
 
       if (!data?.success) {
-        toast.error(data?.message || "Login failed");
+        showToast({
+          id: "LOGIN_FAILED",
+          title: "Login failed",
+          description: "something went wrong!",
+          variant: "error"
+        });
         return;
       }
 
@@ -49,7 +55,12 @@ const Login = () => {
         dispatch(setUserDetails(userRes.data));
       }
 
-      toast.success("Welcome back 👋");
+      showToast({
+          id: "LOGIN_SUCCESS",
+          title: "Welcome back",
+          description: "Logged in Successfully!",
+          variant: "success"
+        });
       navigate("/");
     } catch (err) {
       toast.error(err?.response?.data?.message || "Something went wrong");
