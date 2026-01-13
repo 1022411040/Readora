@@ -1201,7 +1201,7 @@ const UserMenu = () => {
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-50"
+            className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-999"
           >
             {/* User Info */}
             <div className="p-4 border-b border-slate-100">
@@ -1318,11 +1318,11 @@ const MobileMenu = ({ open, setOpen }) => {
 
           {/* Menu Panel */}
           <motion.div
-            initial={{ x: "100%" }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 20, stiffness: 200 }}
-            className="fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-2xl z-50 lg:hidden flex flex-col"
+            className="fixed top-0 left-0 h-full w-full max-w-xs bg-white shadow-2xl z-50 lg:hidden flex flex-col"
             ref={menuRef}
           >
             {/* Header */}

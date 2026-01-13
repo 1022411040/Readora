@@ -158,7 +158,7 @@ const CategoryWisebook = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 via-white to-slate-100">
       {/* Sticky Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
+      <header className={`sticky top-0 z-20 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200' 
           : 'bg-transparent'
